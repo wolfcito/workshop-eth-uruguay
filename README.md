@@ -4,7 +4,7 @@
 
 ⚙️ Herramientas NextJS, RainbowKit, Hardhat, Wagmi, Viem, and Typescript.
 
-![Workshop ETH ECUADOR - PUSH PROTOCOL - MODE NETWORK](workshop.png)
+![Workshop ETH URUGUAY - PUSH PROTOCOL - MODE NETWORK](workshop.png)
 
 ## Requerimientos
 
@@ -18,18 +18,18 @@ Herramientas en local:
 
 Para para iniciar el dapp
 
-1. Clone this repo & install dependencies
+- Clone this repo & install dependencies
 
-```
-git clone https://github.com/wolfcito/workshop-eth-ecuador
-cd workshop-eth-ecuador
+```shell
+git clone https://github.com/wolfcito/workshop-eth-uruguay
+cd workshop-eth-uruguay
 yarn install
 ```
 
 This command deploys a test smart contract to the local network. The contract is located in `packages/hardhat/contracts` and can be modified to suit your needs. The `yarn deploy` command uses the deploy script located in `packages/hardhat/deploy` to deploy the contract to the network. You can also customize the deploy script.
 
-2. On a third terminal, start your NextJS app:
+- On a third terminal, start your NextJS app
 
-```
+```shell
 yarn start
 ```
