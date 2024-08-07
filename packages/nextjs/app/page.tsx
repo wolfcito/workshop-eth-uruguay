@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
 import type { NextPage } from "next";
 import { useAccount } from "wagmi";
@@ -7,9 +8,11 @@ import { BugAntIcon } from "@heroicons/react/24/outline";
 import { LinkPink } from "~~/components/link-pink";
 import { Address } from "~~/components/scaffold-eth";
 import { XIcon } from "~~/icons";
+import { sendPushChatMessage } from "~~/services/chats";
 
 const Home: NextPage = () => {
   const { address: connectedAddress } = useAccount();
+  const [message, setMessage] = useState<string>("");
 
   return (
     <>
@@ -32,6 +35,11 @@ const Home: NextPage = () => {
             ))}
           </div>
 
+          <div> Iniciar chat</div>
+          <input className="bg-black" type="text" value={message} onChange={e => setMessage(e.target.value)} />
+          <button className="bg-purple-600 btn" onClick={() => sendPushChatMessage({ content: message })}>
+            Enviar mensaje
+          </button>
           {/* <p className="text-lg text-center">
             Get started by editing{" "}
             <code className="inline-block max-w-full text-base italic font-bold break-words break-all bg-base-300">
